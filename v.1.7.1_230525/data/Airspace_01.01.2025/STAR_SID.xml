@@ -1,0 +1,67 @@
+<Procedures>
+  <SIDs>
+    <Runway Name="16L">
+      <SID Name="VADEN4F" Airport="LTFM">
+        <Route>
+          <Waypoint Name="HDGM174" Altitude="900+" Turn="Right"/>
+          <Waypoint Name="FM047" Altitude="2100+" Speed="240-" Turn="Right"/>
+          <Waypoint Name="FM048" Turn="Right"/>
+          <Waypoint Name="FM049" Turn="Right"/>
+          <Waypoint Name="FM061" Altitude="8000+" Turn="Left"/>
+          <Waypoint Name="FM062" Turn="Left"/>
+          <Waypoint Name="FM063"/>
+          <Waypoint Name="FM064" Turn="Right"/>
+          <Waypoint Name="FM065" Turn="Left"/>
+          <Waypoint Name="FM066" Turn="Right"/>
+          <Waypoint Name="VADEN"/>
+        </Route>
+      </SID>
+      <SID Name="TUDBU4F" Airport="LTFM">
+        <Route>
+          <Waypoint Name="HDGM174" Altitude="900+" Turn="Right"/>
+          <Waypoint Name="FM047" Altitude="2100+" Speed="240-" Turn="Right"/>
+          <Waypoint Name="FM048" Turn="Right"/>
+          <Waypoint Name="FM049" Turn="Right"/>
+          <Waypoint Name="FM061" Altitude="8000+" Turn="Left"/>
+          <Waypoint Name="FM062" Turn="Left"/>
+          <Waypoint Name="FM063"/>
+          <Waypoint Name="FM064" Turn="Right"/>
+          <Waypoint Name="FM065"/>
+          <Waypoint Name="TUDBU"/>
+        </Route>
+      </SID>
+    </Runway>
+  </SIDs>
+  <STARs>
+    <Runway Name="16R">
+      <STAR Name="DRAMO2P" Airport="LTFM">
+        <Route>
+          <Waypoint Name="DIVDI" Altitude="5000" Speed="220"/>
+          <Waypoint Name="FM567"/>
+          <Waypoint Name="FM566"/>
+          <Waypoint Name="FM565" Altitude="11000" Turn="Left"/>
+          <Waypoint Name="FM564" Turn="Left"/>
+          <Waypoint Name="FM563" Turn="Left"/>
+          <Waypoint Name="FM562" Turn="Left"/>
+          <Waypoint Name="FM561" Altitude="11000" Speed="230" Turn="Right"/>
+          <Waypoint Name="FM560" Turn="Left"/>
+          <Waypoint Name="FM556" Turn="Left"/>
+          <Waypoint Name="FM396" Speed="150+" Turn="Right"/>
+          <Waypoint Name="FM395"/>
+          <Waypoint Name="ENRAW" Turn="Right"/>
+          <Waypoint Name="FM375"/>
+          <Waypoint Name="FM758" Turn="Left"/>
+          <Waypoint Name="FM757" Turn="Left"/>
+          <Waypoint Name="FM756" Turn="Left"/>
+          <Waypoint Name="FM755"/>
+          <Waypoint Name="FM754" Speed="250" Turn="Right"/>
+          <Waypoint Name="FM753"/>
+          <Waypoint Name="FM752" Speed="220-200+" Turn="Left"/>
+          <Waypoint Name="FM751" Turn="Left"/>
+          <Waypoint Name="AGBET" Speed="270-280" Turn="Left"/>
+          <Waypoint Name="DRAMO"/>
+        </Route>
+      </STAR>
+    </Runway>
+  </STARs>
+</Procedures>

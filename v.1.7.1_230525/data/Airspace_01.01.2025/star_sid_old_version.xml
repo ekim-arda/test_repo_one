@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SIDs>
+  <!-- Istanbul Airport (LTFM) SIDs -->
+  <!-- Runway 16L -->
+  <Runway Name="RWY" DataRunway="16L">
+    <SID Name="VADEN4F"/>
+    <SID Name="TUDBU4F"/>
+    <SID Name="IBLAX4F"/>
+    <SID Name="BARPE4F"/>
+    <SID Name="IVGUS4F"/>
+    <SID Name="MAKOL4F"/>
+    <SID Name="OSMEV4F"/>
+    <SID Name="ASMAP4F"/>
+    <SID Name="RATVU4F"/>
+    <SID Name="ASMAP4T"/>
+    <SID Name="RATVU4T"/>
+  </Runway>
+  
+  <!-- Runway 17R -->
+  <Runway Name="RWY" DataRunway="17R">
+    <SID Name="VADEN4G"/>
+    <SID Name="TUDBU4G"/>
+    <SID Name="IBLAX4G"/>
+    <SID Name="BARPE4G"/>
+    <SID Name="IVGUS4G"/>
+    <SID Name="MAKOL4G"/>
+    <SID Name="OSMEV4G"/>
+    <SID Name="ASMAP4G"/>
+    <SID Name="RATVU4G"/>
+    <SID Name="ASMAP4U"/>
+    <SID Name="RATVU4U"/>
+  </Runway>
+  
+  <!-- Runway 18 -->
+  <Runway Name="RWY" DataRunway="18">
+    <SID Name="VADEN4H"/>
+    <SID Name="TUDBU4H"/>
+    <SID Name="IBLAX4H"/>
+    <SID Name="BARPE4H"/>
+    <SID Name="IVGUS4H"/>
+    <SID Name="MAKOL4H"/>
+    <SID Name="OSMEV4H"/>
+    <SID Name="ASMAP4H"/>
+    <SID Name="RATVU4H"/>
+    <SID Name="ASMAP4V"/>
+    <SID Name="RATVU4V"/>
+    <SID Name="BARPE4V"/>
+    <SID Name="IVGUS4V"/>
+  </Runway>
+  
+  <!-- Runway 34R -->
+  <Runway Name="RWY" DataRunway="34R">
+    <SID Name="VADEN4C"/>
+    <SID Name="TUDBU4C"/>
+    <SID Name="IBLAX4C"/>
+    <SID Name="BARPE4C"/>
+    <SID Name="IVGUS4C"/>
+    <SID Name="MAKOL4C"/>
+    <SID Name="OSMEV4C"/>
+    <SID Name="ASMAP4C"/>
+    <SID Name="RATVU4C"/>
+    <SID Name="ASMAP4Q"/>
+  </Runway>
+  
+  <!-- Runway 35L -->
+  <Runway Name="RWY" DataRunway="35L">
+    <SID Name="VADEN4D"/>
+    <SID Name="TUDBU4D"/>
+    <SID Name="IBLAX4D"/>
+    <SID Name="BARPE4D"/>
+    <SID Name="IVGUS4D"/>
+    <SID Name="MAKOL4D"/>
+    <SID Name="OSMEV4D"/>
+    <SID Name="ASMAP4D"/>
+    <SID Name="RATVU4D"/>
+    <SID Name="ASMAP4R"/>
+  </Runway>
+ 
+  <!-- Runway 36 -->
+  <Runway Name="RWY" DataRunway="36">
+    <SID Name="VADEN4E"/>
+    <SID Name="TUDBU4E"/>
+    <SID Name="IBLAX4E"/>
+    <SID Name="BARPE4E"/>
+    <SID Name="IVGUS4E"/>
+    <SID Name="MAKOL4E"/>
+    <SID Name="OSMEV4E"/>
+    <SID Name="ASMAP4E"/>
+    <SID Name="RATVU4E"/>
+    <SID Name="ASMAP4S"/>
+  </Runway>
+  
+  <!-- SID Route Definitions -->
+  
+  <!-- SIDs for Runway 16L-->
+  <SID Name="VADEN4F" Airport="LTFM" Runways="16L,16R">
+    <Route Runway="16L">[HDGM174;A900+;R]-FM047[A2100+;K240-;R]-FM048[R]-FM049[R]-FM061[A8000+,L]-FM062[L]-FM063-FM064[R]-FM065[L]-FM066[R]-VADEN</Route>
+    </SID>
+  <SID Name="TUDBU4F" Airport="LTFM" Runways="16L,16R">
+    <Route Runway="16L">[HDGM174;A900+;R]-FM047[A2100+;K240-;R]-FM048[R]-FM049[R]-FM061[A8000+,L]-FM062[L]-FM063-FM064[R]-FM065-TUDBU</Route>
+    </SID>  
+  <SID Name="IBLAX4F" Airport="LTFM" Runways="16L,16R">
+    <Route Runway="16L">[HDGM174;A900+;R]-FM047[A2100+;K240-;R]-FM048[R]-FM049[R]-FM061[A8000+,L]-FM062[L]-FM063[R]-IBLAX</Route>
+    </SID>  
+  <SID Name="BARPE4F" Airport="LTFM" Runways="16L,16R">
+    <Route Runway="16L">[HDGM174;A900+;R]-FM047[A2100+;K240-;R]-FM056[R]-FM057-ORIAC[R]-BARPE</Route>
+    </SID>  
+  <SID Name="IVGUS4F" Airport="LTFM" Runways="16L,16R">
+    <Route Runway="16L">[HDGM174;A900+;R]-FM047[A2100+;K240-;R]-FM056[R]-FM057[L]-ADMIV-IVGUS</Route>
+    </SID>
+  <SID Name="MAKOL4F" Airport="LTFM" Runways="16L,16R">
+    <Route Runway="16L">[HDGM174;A900+;R]-FM047[A2100+;K240-;R]-FM048[R]-FM049[R]-FM061[A8000+;R]-FM082[R]-FM083-FM084[L]-ETLEY[L]-MAKOL</Route>
+    </SID>
+  <SID Name="OSMEV4F" Airport="LTFM" Runways="16L,16R">
+    <Route Runway="16L">[HDGM174;A900+;R]-FM047[A2100+;K240-;R]-FM048[R]-FM049[R]-FM061[A8000+;R]-FM082[R]-FM083-FM084[L]-ETLEY-FM085[R]-FM086[R]-OSMEV</Route>
+    </SID>
+  <SID Name="ASMAP4F" Airport="LTFM" Runways="16L,16R">
+    <Route Runway="16L">[HDGM174,A900+;R]-FM047[A2100+;K240-;L]-FM054[L]-ASGAX-VRACA[L]-ROCHE[L]-NASNA[L]-NENVI-IBSIN-LECKI-VICEN[R]-ASMAP</Route>
+    </SID>
+  <SID Name="RATVU4F" Airport="LTFM" Runways="16L,16R">
+    <Route Runway="16L">[HDGM174,A900+;R]-FM047[A2100+;K240-;L]-FM054[L]-ASGAX-VRACA-EVMOG[L]-GUPTU[R]-XESRA[L]-RATVU</Route>
+    </SID>
+  <SID Name="ASMAP4T" Airport="LTFM" Runways="16L,16R">
+    <Route Runway="16L">[HDGM174;A900+;R]-FM047[A2100+;K240-;L]-FM054-ASGAX[L]-FM077[R]-FM078[R]-PEPAK[L]-NENVI[L]-IBSIN-LECKI-VICEN[R]-ASMAP</Route>
+    </SID>
+  <SID Name="RATVU4T" Airport="LTFM" Runways="16L,16R">
+    <Route Runway="16L">[HDGM174;A900+;R]-FM047[A2100+;K240-;L]-FM054-ASGAX[L]-FM077[R]-FM078[R]-PEPAK[R]-FM079[L]-RATVU</Route>
+    </SID>
+  
+  <!-- SIDs for Runway 17R -->
+  <SID Name="VADEN4G" Airport="LTFM" Runways="17R">
+    <Route Runway="17R">[HDGM174;A760+]-FM052[A1800+;K240-;R]-FM060[R]-REDGI[R]-FM061[A8000+,L]-FM062[L]-FM063-FM064[R]-FM065[L]-FM066[R]-VADEN</Route>
+    </SID>
+  <SID Name="TUDBU4G" Airport="LTFM" Runways="17R">
+    <Route Runway="17R">[HDGM174;A760+]-FM052[A1800+;K240-;R]-FM060[R]-REDGI[R]-FM061[A8000+,L]-FM062[L]-FM063-FM064[R]-FM065-TUDBU</Route>
+  </SID>
+  <SID Name="IBLAX4G" Airport="LTFM" Runways="17R">
+   <Route Runway="17R">[HDGM174;A760+]-FM052[A1800+;K240-;R]-FM060[R]-REDGI[R]-FM061[A8000+,L]-FM062[L]-FM063[R]-IBLAX</Route>
+   </SID>
+  <SID Name="BARPE4G" Airport="LTFM" Runways="17R">
+   <Route Runway="17R">[HDGM174;A760+]-FM052[A1800+;K240-;R]-FM054[R]-FM056-FM057-ORIAC[R]-BARPE</Route>
+   </SID> 
+  <SID Name="IVGUS4G" Airport="LTFM" Runways="17R">
+   <Route Runway="17R">[HDGM174;A760+]-FM052[A1800+;K240-;R]-FM054[R]-FM056-FM057[L]-ADMIV-IVGUS</Route>
+   </SID>
+  <SID Name="MAKOL4G" Airport="LTFM" Runways="17R">
+   <Route Runway="17R">[HDGM174;A760+]-FM052[A1800+;K240-;R]-FM060[R]-REDGI[R]-FM061[A8000+;R]-FM082[R]-FM083-FM084[L]-ETLEY[L]-MAKOL</Route>
+   </SID>
+  <SID Name="OSMEV4G" Airport="LTFM" Runways="17R">
+   <Route Runway="17R">[HDGM174;A760+]-FM052[A1800+;K240-;R]-FM060[R]-REDGI[R]-FM061[A8000+;R]-FM082[R]-FM083-FM084[L]-ETLEY-FM085[R]-FM086[R]-OSMEV</Route>
+   </SID>
+  <SID Name="ASMAP4G" Airport="LTFM" Runways="17R">
+   <Route Runway="17R">[HDGM174,A760+]-FM052[A1800+;K240-;R]-FM054[L]-ASGAX-VRACA[L]-ROCHE[L]-NASNA[L]-NENVI-IBSIN-LECKI-VICEN[R]-ASMAP</Route>
+   </SID>
+  <SID Name="RATVU4G" Airport="LTFM" Runways="17R">
+   <Route Runway="17R">[HDGM174,A760+]-FM052[A1800+;K240-;R]-FM054[L]-ASGAX-VRACA-EVMOG[L]-GUPTU[R]-XESRA[L]-RATVU</Route>
+   </SID>
+  
+  <SID Name="ASMAP4U" Airport="LTFM" Runways="17R">
+   VI[L]-IBSIN-LECKI-VICEN[R]-ASMAP</Route>
+    <Route Runway="17R">[HDGM174;A760+]-FM052[A1800+;K240-;R]-FM054[L]-ASGAX[L]-FM077[R]-FM078[R]-PEPAK[L]-NENVI[L]-IBSIN-LECKI-VICEN[R]-ASMAP</Route>
+  </SID>
+  
+  <SID Name="RATVU4U" Airport="LTFM" Runways="17R">
+   79[L]-RATVU</Route>
+    <Route Runway="17R">[HDGM174;A760+]-FM052[A1800+;K240-;R]-FM054[L]-ASGAX[L]-FM077[R]-FM078[R]-PEPAK[R]-FM079[L]-RATVU</Route>
+  </SID>
+  
+  <!-- SIDs for Runway 18 -->
+  <SID Name="VADEN4H" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174;A760+;L]-FM072[A2030+;K240-;L]-FM073[L]-HANCI[L]-FM061[A8000+,R]-FM062[L]-FM063-FM064[R]-FM065[L]-FM066[R]-VADEN</Route>
+  </SID>
+  
+  <SID Name="TUDBU4H" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174;A760+;L]-FM072[A2030+;K240-;L]-FM073[L]-HANCI[L]-FM061[A8000+,R]-FM062[L]-FM063-FM064[R]-FM065-TUDBU</Route>
+  </SID>
+  
+  <SID Name="IBLAX4H" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174;A760+;L]-FM072[A2030+;K240-;L]-FM073[L]-HANCI[L]-FM061[A8000+,R]-FM062[L]-FM063[R]-IBLAX</Route>
+  </SID>
+  
+  <SID Name="BARPE4H" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174,A760+;L]-FM072[A2030+;K240-;R]-FM074-TIBNU[A6000+;R]-ASGAX[R]-TETPU[R]-INPIK-ADMIV-GUEME[R]-ORIAC[L]-BARPE</Route>
+  </SID>
+  
+  <SID Name="IVGUS4H" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174,A760+;L]-FM072[A2030+;K240-;R]-FM074-TIBNU[A6000+;R]-ASGAX[R]-TETPU[R]-INPIK-ADMIV[L]-IVGUS</Route>
+  </SID>
+  
+  <SID Name="MAKOL4H" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174;A760+;L]-FM072[A2030+;K240-;L]-FM073[L]-HANCI[L]-FM081[A8000+,R]-FM082[R]-FM083-FM084[L]-ETLEY[L]-MAK0L</Route>
+  </SID>
+  
+  <SID Name="OSMEV4H" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174;A760+;L]-FM072[A2030+;K240-;L]-FM073[L]-HANCI[L]-FM081[A8000+,R]-FM082[R]-FM083-FM084[L]-ETLEY-FM085[R]-FM086[R]-OSMEV</Route>
+  </SID>
+  
+  <SID Name="ASMAP4H" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174;A760+;L]-FM072[A2030+;K240-;R]-FM074-TIBNU[A6000+;L]-FM076[L]-ROCHE[L]-NASNA[L]-NENVI-IBSIN-LECKI-VICEN[R]-ASMAP</Route>
+  </SID>
+  
+  <SID Name="RATVU4H" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174;A760+;L]-FM072[A2030+;K240-;R]-FM074-TIBNU[A6000+;L]-FM076[L]-ROCHE[R]-GUPTU-XESRA[L]-RATVU</Route>
+  </SID>
+  
+  <SID Name="ASMAP4V" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174;A760+;L]-FM072[A2030+;K240-;R]-FM074[L]-FM077[L]-FM078[R]-PEPAK[L]-NENVI[L]-IBSIN-LECKI-VICEN[R]-ASMAP</Route>
+  </SID>
+  
+  <SID Name="RATVU4V" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174;A760+;L]-FM072[A2030+;K240-;R]-FM074[L]-FM077[L]-FM078[R]-PEPAK[R]-FM079[L]-RATVU</Route>
+  </SID>
+  
+  <SID Name="BARPE4V" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174;A760+;L]-FM072[A2030+;K240-;R]-FM074-TIBNU[A6000+;R]-ASGAX[R]-UMBEM-MIVDI[R]-APSID[R]-BARPE</Route>
+  </SID>
+  
+  <SID Name="IVGUS4V" Airport="LTFM" Runways="18">
+    <Route Runway="18">[HDGM174;A760+;L]-FM072[A2030+;K240-;R]-FM074-TIBNU[A6000+;R]-ASGAX[R]-UMBEM-MIVDI[L]-IVGUS</Route>
+  </SID>
+  
+  <!-- SIDs for Runway 34L/34R -->
+  <SID Name="VADEN4C" Airport="LTFM" Runways="34L,34R">
+    <Route Runway="34L">[HDGM354;A760+;L]-FM017[A2000+;K240-;L]-FM011[L]-ACCUA[R]-VADEN</Route>
+    <Route Runway="34R">[HDGM354;A760+;L]-FM017[A2000+;K240-;L]-FM011[L]-ACCUA[R]-VADEN</Route>
+  </SID>
+  
+  <SID Name="TUDBU4C" Airport="LTFM" Runways="34L,34R">
+    <Route Runway="34L">[HDGM354;A760+;L]-FM017[A2000+;K240-;R]-FM090[L]-GOVGU[R]-IBLAXFM090[L]-GOVGU[L]-UNLIR[R]-TUDBU</Route>
+    <Route Runway="34R">[HDGM354;A760+;L]-FM017[A2000+;K240-;R]-FM090[L]-GOVGU[L]-UNLIR[R]-TUDBU</Route>
+  </SID>
+  
+  <SID Name="IBLAX4C" Airport="LTFM" Runways="34L,34R">
+    <Route Runway="34L">[HDGM354;A760+;L]-FM017[A2000+;K240-;R]-
+      </SID>
+</SIDs>
+<STARs>
+  <!-- Istanbul Airport (LTFM) STARs -->
+  
+  <!-- Runway 16R -->
+  <Runway Name="RWY" DataRunway="16R">
+    <STAR Name="DRAMO2P"/>
+    <STAR Name="INBET2P"/>
+    <STAR Name="ERSEN2B"/>
+    <STAR Name="SISPI2B"/>
+    <STAR Name="RIXEN2P"/>
+    <STAR Name="ATPIX2B"/>
+    <STAR Name="ERSEN2R"/>
+  </Runway>
+  
+  <!-- Runway -->
+  <Runway Name="RWY" DataRunway="17L">
+    <STAR Name="DRAMO2P"/>
+    <STAR Name="INBET2P"/>
+    <STAR Name="ERSEN2B"/>
+    <STAR Name="SISPI2B"/>
+    <STAR Name="RIXEN2P"/>
+    <STAR Name="ATPIX2B"/>
+    <STAR Name="ERSEN2R"/>
+  </Runway>
+  
+  <!-- Runway 18 -->
+  <Runway Name="RWY" DataRunway="18">
+    <STAR Name="DRAMO2P"/>
+    <STAR Name="INBET2P"/>
+    <STAR Name="ERSEN2B"/>
+    <STAR Name="SISPI2B"/>
+    <STAR Name="RIXEN2P"/>
+    <STAR Name="ATPIX2B"/>
+    <STAR Name="ERSEN2R"/>
+  </Runway>
+
+  <!-- Runway 34L -->
+  <Runway Name="RWY" DataRunway="34L">
+    <STAR Name="ATPIX2N"/>
+    <STAR Name="ATPIX2A"/>
+    <STAR Name="DRAMO2A"/>
+    <STAR Name="INBET2A"/>
+    <STAR Name="RILEX2N"/>
+    <STAR Name="RILEX2A"/>
+    <STAR Name="RIXEN2A"/>
+    <STAR Name="ERSEN2A"/>
+    <STAR Name="ERSEN2Q"/>
+    <STAR Name="SISPI2A"/>
+  </Runway>
+  
+  <!-- Runway 35R -->
+  <Runway Name="RWY" DataRunway="35R">
+    <STAR Name="ATPIX2N"/>
+    <STAR Name="ATPIX2A"/>
+    <STAR Name="DRAMO2A"/>
+    <STAR Name="INBET2A"/>
+    <STAR Name="RILEX2N"/>
+    <STAR Name="RILEX2A"/>
+    <STAR Name="RIXEN2A"/>
+    <STAR Name="ERSEN2A"/>
+    <STAR Name="ERSEN2Q"/>
+    <STAR Name="SISPI2A"/>
+  </Runway>
+  
+  <!-- Runway 36 -->
+  <Runway Name="RWY" DataRunway="36">
+    <STAR Name="ATPIX2N"/>
+    <STAR Name="ATPIX2A"/>
+    <STAR Name="DRAMO2A"/>
+    <STAR Name="INBET2A"/>
+    <STAR Name="RILEX2N"/>
+    <STAR Name="RILEX2A"/>
+    <STAR Name="RIXEN2A"/>
+    <STAR Name="ERSEN2A"/>
+    <STAR Name="ERSEN2Q"/>
+    <STAR Name="SISPI2A"/>
+  </Runway>
+  
+  <!-- STAR Route Definitions -->
+  
+  <!-- STARs for Runway 16R/18 -->
+  <STAR Name="DRAMO2P" Airport="LTFM" Runways="16R,18">
+    <Route Runway="16R">[A5000;K220] DIVDI - FM567 - FM566 - FM565 [A11000;L]- FM564 [L]- FM563 [L]- FM562 [L]- FM561 [A11000;K230;R]- FM560 [L]- FM556 [L]- FM396 [F150+;R]- FM395 - ENRAW [R]- FM375 - FM758 [L]- FM757 [L]- FM756 [L]- FM755 - FM754 [K250;R]- FM753 - FM752 [F220-;F200+;L]- FM751 [L]- AGBET [F270-;K280;L]- DRAMO</Route>
+   - FM561 [A11000;K230;R]- FM560 [L]- FM556 [L]- FM396 [F150+;R]- FM395 - ENRAW [R]- FM375 - FM758 [L]- FM757 [L]- FM756 [L]- FM755 - FM754 [K250;R]- FM753 - FM752 [F220-;F200+;L]- FM751 [L]- AGBET [F270-;K280;L]- DRAMO</Route>
+    <Route Runway="18">[A5000;K220] DIVDI - FM567 - FM566 - FM565 [A11000;L]- FM564 [L]- FM563 [L]- FM562 [L]- FM561 [A11000;K230;R]- FM560 [L]- FM556 [L]- FM396 [F150+;R]- FM395 - ENRAW [R]- FM375 - FM758 [L]- FM757 [L]- FM756 [L]- FM755 - FM754 [K250;R]- FM753 - FM752 [F220-;F200+;L]- FM751 [L]- AGBET [F270-;K280;L]- DRAMO</Route>
+  </STAR>
+  
+  <STAR Name="INBET2P" Airport="LTFM" Runways="16R,18">
+    <Route Runway="16R">[A5000;K220] DIVDI - FM567 - FM566 - FM565 [A11000;L]- FM564 [L]- FM563 [L]- FM562 [L]- FM561 [A11000;K230;R]- FM560 [L]- FM556 [L]- FM396 [F150+;R]- FM395 - ENRAW [R]- FM375 - FM758 [L]- FM757 [L]- FM756 [L]- FM755 - FM754 [K250;R]- FM753 - FM752 [F220-;F200+;R]- FM751 [L]- GUBUL [F270-;K280]- LEKMI [L]- INBET</Route>
+   - FM561 [A11000;K230;R]- FM560 [L]- FM556 [L]- FM396 [F150+;R]- FM395 - ENRAW [R]- FM375 - FM758 [L]- FM757 [L]- FM756 [L]- FM755 - FM754 [K250;R]- FM753 - FM752 [F220-;F200+;R]- FM751 [L]- GUBUL [F270-;K280]- LEKMI [L]- INBET</Route>
+    <Route Runway="18">[A5000;K220] DIVDI - FM567 - FM566 - FM565 [A11000;L]- FM564 [L]- FM563 [L]- FM562 [L]- FM561 [A11000;K230;R]- FM560 [L]- FM556 [L]- FM396 [F150+;R]- FM395 - ENRAW [R]- FM375 - FM758 [L]- FM757 [L]- FM756 [L]- FM755 - FM754 [K250;R]- FM753 - FM752 [F220-;F200+;R]- FM751 [L]- GUBUL [F270-;K280]- LEKMI [L]- INBET</Route>
+  </STAR>
+  
+  <STAR Name="ERSEN2B" Airport="LTFM" Runways="16R,18">
+    <Route Runway="16R">[A5000;K220] DIVDI - FM467 - FM466 - FM465 [A10000;R]- FM464 [R]- FM463 [R]- FM462 [R]- FM461 - FM460 [A10000;K230;L]- FM458 [L]- FM457 [F140-;A12000+;R]- FM456 - FM455 [K250;L]- FM454 - FM453 [R]- FM452 [R]- FM451 [F280-;K280;L]- EPEKI [L]- FM551 [L]- ERSEN- EPEKI [L]- FM551 [L]- ERSEN</Route>
+   - FM461 - FM460 [A10000;K230;L]- FM458 [L]- FM457 [F140-;A12000+;R]- FM456 - FM455 [K250;L]- FM454 - FM453 [R]- FM452 [R]- FM451 [F280-;K280;L]- EPEKI [L]- FM551 [L]- ERSEN</Route>
+    <Route Runway="18">[A5000;K220] DIVDI - FM467 - FM466 - FM465 [A10000;R]- FM464 [R]- FM463 [R]- FM462 [R]- FM461 - FM460 [A10000;K230;L]- FM458 [L]- FM457 [F140-;A12000+;R]- FM456 - FM455 [K250;L]- FM454 - FM453 [R]- FM452 [R]- FM451 [F280-;K280;L]
+   </STAR> 
+
+  
+  <!-- STARs for Runway 34L/35R/36 -->
+  <STAR Name="ATPIX2N" Airport="LTFM" Runways="34L,35R,36">
+    <Route Runway="34L">[A4000+;K220] IMREN - FM836 - FM835 [A10000;L]- FM834 [L]- FM833 [L]- FM832 [L]- FM831 [A10000;K230;R]- FM830 [L]- FM827 [L]- FM908 [F140-;A12000+]- FM035 [L]- LIZTA - FM921 [R]- FM425 [R]- FM424 - FM423 [K250;L]- FM422 - FM421 [F230-;F210+;R]- FM420 [F280-;K280;R]- ATPIX</Route>
+    <Route Runway="35R">[A4000+;K220] IMREN - FM836 - FM835 [A10000;L]- FM834 [L]- FM833 [L]- FM832 [L]- FM831 [A10000;K230;R]- FM830 [L]- FM827 [L]- FM908 [F140-;A12000+]- FM035 [L]- LIZTA - FM921 [R]- FM425 [R]- FM424 - FM423 [K250;L]- FM422 - FM421 [F230-;F210+;R]- FM420 [F280-;K280;R]- ATPIX</Route>
+    <Route Runway="36">[A4000+;K220] IMREN - FM836 - FM835 [A10000;L]- FM834 [L]- FM833 [L]- FM832 [L]- FM831 [A10000;K230;R]- FM830 [L]- FM827 [L]- FM908 [F140-;A12000+]- FM035 [L]- LIZTA - FM921 [R]- FM425 [R]- FM424 - FM423 [K250;L]- FM422 - FM421 [F230-;F210+;R]- FM420 [F280-;K280;R]- ATPIX</Route>
+  </STAR>
+  
+  <STAR Name="ATPIX2A" Airport="LTFM" Runways="34L,35R,36">
+    <Route Runway="34L">[A7000-;A5000+;K220] SADIK - FM436 - FM435 [A10000;R]- FM434 [R]- FM433 [R]- FM432 [R]- FM431 [L]- FM430 [A10000;K230;L]- FM426 [L]- FM425 [F140-;A12000+;R]- FM424 - FM423 [K250;L]- FM422 - FM421 [F230-;F210+;R]- FM420 [F280-;K280;R]- ATPIX</Route>
+    <Route Runway="35R">[A7000-;A5000+;K220] SADIK - FM436 - FM435 [A10000;R]- FM434 [R]- FM433 [R]- FM432 [R]- FM431 [L]- FM430 [A10000;K230;L]- FM426 [L]- FM425 [F140-;A12000+;R]- FM424 - FM423 [K250;L]- FM422 - FM421 [F230-;F210+;R]- FM420 [F280-;K280;R]- ATPIX</Route>
+    <Route Runway="36">[A7000-;A5000+;K220] SADIK - FM436 - FM435 [A10000;R]- FM434 [R]- FM433 [R]- FM432 [R]- FM431 [L]- FM430 [A10000;K230;L]- FM426 [L]- FM425 [F140-;A12000+;R]- FM424 - FM423 [K250;L]- FM422 - FM421 [F230-;F210+;R]- FM420 [F280-;K280;R]- ATPIX</Route>
+  </STAR>
+  
+  <STAR Name="DRAMO2A" Airport="LTFM" Runways="34L,35R,36">
+    <Route Runway="34L">[A4000+;K220] IMREN - FM736 - FM735 [A9000;R]- FM734 [R]- FM733 - FM732 [R]- FM731 [L]- FM730 [A9000;K230;L]- FM725 [L]- FM724 [F140-;A12000+;L]- FM723 - FM722 [K250;R]- FM721 - FM720 [F220-;F200+;L]- AGBET [F250-;K280;L]- DRAMO</Route>
+    <Route Runway="35R">[A4000+;K220] IMREN - FM736 - FM735 [A9000;R]- FM734 [R]- FM733 - FM732 [R]- FM731 [L]- FM730 [A9000;K230;L]- FM725 [L]- FM724 [F140-;A12000+;L]- FM723 - FM722 [K250;R]- FM721 - FM720 [F220-;F200+;L]- AGBET [F250-;K280;L]- DRAMO</Route>
+    <Route Runway="36">[A4000+;K220] IMREN - FM736 - FM735 [A9000;R]- FM734 [R]- FM733 - FM732 [R]- FM731 [L]- FM730 [A9000;K230;L]- FM725 [L]- FM724 [F140-;A12000+;L]- FM723 - FM722 [K250;R]- FM721 - FM720 [F220-;F200+;L]- AGBET [F250-;K280;L]- DRAMO</Route>
+  </STAR>
+  
+  <STAR Name="INBET2A" Airport="LTFM" Runways="34L,35R,36">
+    <Route Runway="34L">[A4000+;K220] IMREN - FM736 - FM735 [A9000;R]- FM734 [R]- FM733 [R]- FM732 [R]- FM731 [L]- FM730 [A9000;K230;L]- FM725 [L]- FM724 [F140-;A12000+;R]- FM723 [F170-;F150+;K250;R]- GUBUL - LEKMI [F250-;K280;L]- INBET</Route>
+    <Route Runway="35R">[A4000+;K220] IMREN - FM736 - FM735 [A9000;R]- FM734 [R]- FM733 [R]- FM732 [R]- FM731 [L]- FM730 [A9000;K230;L]- FM725 [L]- FM724 [F140-;A12000+;R]- FM723 [F170-;F150+;K250;R]- GUBUL - LEKMI [F250-;K280;L]- INBET</Route>
+    <Route Runway="36">[A4000+;K220] IMREN - FM736 - FM735 [A9000;R]- FM734 [R]- FM733 [R]- FM732 [R]- FM731 [L]- FM730 [A9000;K230;L]- FM725 [L]- FM724 [F140-;A12000+;R]- FM723 [F170-;F150+;K250;R]- GUBUL - LEKMI [F250-;K280;L]- INBET</Route>
+  </STAR>
+  
+  <STAR Name="RILEX2N" Airport="LTFM" Runways="34L,35R,36">
+    <Route Runway="34L">[A7000-;A5000+;K220] SADIK - FM536 - FM535 [A11000;L]- FM534 [L]- FM533 [L]- FM532 [L]- FM531 [A11000;K230;R]- FM530 [R]- FM526 - FM525 [F160-;F150+;R]- FM524 - FM523 [K250;L]- FM522 - FM521 [R]- FM520 [F270-;K280;L]- ERSEN</Route>
+    <Route Runway="35R">[A7000-;A5000+;K220] SADIK - FM536 - FM535 [A11000;L]- FM534 [L]- FM533 [L]- FM532 [L]- FM531 [A11000;K230;R]- FM530 [R]- FM526 - FM525 [F160-;F150+;R]- FM524 - FM523 [K250;L]- FM522 - FM521 [R]- FM520 [F270-;K280;L]- ERSEN</Route>
+    <Route Runway="36">[A7000-;A5000+;K220] SADIK - FM536 - FM535 [A11000;L]- FM534 [L]- FM533 [L]- FM532 [L]- FM531 [A11000;K230;R]- FM530 [R]- FM526 - FM525 [F160-;F150+;R]- FM524 - FM523 [K250;L]- FM522 - FM521 [R]- FM520 [F270-;K280;L]- ERSEN</Route>
+  </STAR>
+  
+  <STAR Name="RILEX2A" Airport="LTFM" Runways="34L,35R,36">
+    <Route Runway="34L">[A4000+;K220] IMREN - FM836 - FM835 [A10000;L]- FM834 [L]- FM833 [L]- FM832 [L]- FM831 [A10000;K230;R]- FM830 [R]- FM827 [R]- FM826 [F160-;F140+;R]- FM825 - FM824 [K250;L]- FM823 - FM822 [R]- FM821 [F270-;K280;R]- FM820 - IPMIL [F310-]- RILEX</Route>
+    <Route Runway="35R">[A4000+;K220] IMREN - FM836 - FM835 [A10000;L]- FM834 [L]- FM833 [L]- FM832 [L]- FM831 [A10000;K230;R]- FM830 [R]- FM827 [R]- FM826 [F160-;F140+;R]- FM825 - FM824 [K250;L]- FM823 - FM822 [R]- FM821 [F270-;K280;R]- FM820 - IPMIL [F310-]- RILEX</Route>
+    <Route Runway="36">[A4000+;K220] IMREN - FM836 - FM835 [A10000;L]- FM834 [L]- FM833 [L]- FM832 [L]- FM831 [A10000;K230;R]- FM830 [R]- FM827 [R]- FM826 [F160-;F140+;R]- FM825 - FM824 [K250;L]- FM823 - FM822 [R]- FM821 [F270-;K280;R]- FM820 - IPMIL [F310-]- RILEX</Route>
+  </STAR>
+  
+  <STAR Name="RIXEN2A" Airport="LTFM" Runways="34L,35R,36">
+    <Route Runway="34L">[A4000+;K220] IMREN - FM836 - FM835 [A10000;L]- FM834 [L]- FM833 [L]- FM832 [L]- FM831 [A10000;K230;R]- FM830 [L]- FM827 - FM908 [F160-;F140+]- FM907 - FM906 - GITVO [K250;R]- ATVAS - GINLI [F230-;K280]- RIXEN</Route>
+    <Route Runway="35R">[A4000+;K220] IMREN - FM836 - FM835 [A10000;L]- FM834 [L]- FM833 [L]- FM832 [L]- FM831 [A10000;K230;R]- FM830 [L]- FM827 - FM908 [F160-;F140+]- FM907 - FM906 - GITVO [K250;R]- ATVAS - GINLI [F230-;K280]- RIXEN</Route>
+    <Route Runway="36">[A4000+;K220] IMREN - FM836 - FM835 [A10000;L]- FM834 [L]- FM833 [L]- FM832 [L]- FM831 [A10000;K230;R]- FM830 [L]- FM827 - FM908 [F160-;F140+]- FM907 - FM906 - GITVO [K250;R]- ATVAS - GINLI [F230-;K280]- RIXEN</Route>
+  </STAR>
+  
+  <STAR Name="ERSEN2A" Airport="LTFM" Runways="34L,35R,36,16R,18">
+    <Route Runway="34L">[A7000-;A5000+;K220] SADIK - FM536 - FM535 [A11000;L]- FM534 [L]- FM533 [L]- FM532 [L]- FM531 [A11000;K230;R]- FM530 [R]- FM526 - FM525 [F160-;F150+;R]- FM524 - FM523 [K250;L]- FM522 - FM521 [R]- FM520 [F270-;K280;L]- ERSEN</Route>
+    <Route Runway="35R">[A7000-;A5000+;K220] SADIK - FM536 - FM535 [A11000;L]- FM534 [L]- FM533 [L]- FM532 [L]- FM531 [A11000;K230;R]- FM530 [R]- FM526 - FM525 [F160-;F150+;R]- FM524 - FM523 [K250;L]- FM522 - FM521 [R]- FM520 [F270-;K280;L]- ERSEN</Route>
+    <Route Runway="36">[A7000-;A5000+;K220] SADIK - FM536 - FM535 [A11000;L]- FM534 [L]- FM533 [L]- FM532 [L]- FM531 [A11000;K230;R]- FM530 [R]- FM526 - FM525 [F160-;F150+;R]- FM524 - FM523 [K250;L]- FM522 - FM521 [R]- FM520 [F270-;K280;L]- ERSEN</Route>
+  </STAR>
+  
+  <STAR Name="ERSEN2Q" Airport="LTFM" Runways="34L,35R,36">
+    <Route Runway="34L">[A7000-;A5000+;K220] SADIK - FM436 - FM435 [A10000;R]- FM434 [R]- FM433 [R]- FM432 [R]- FM431 [L]- FM430 [A10000;K230;L]- FM426 [L]- FM425 [F140-;A12000+;L]- FM424 [K250;L]- PAZAR - GEFME - PATHO [F280-;K280]- TUSCA [R]- ERSEN</Route>
+    <Route Runway="35R">[A7000-;A5000+;K220] SADIK - FM436 - FM435 [A10000;R]- FM434 [R]- FM433 [R]- FM432 [R]- FM431 [L]- FM430 [A10000;K230;L]- FM426 [L]- FM425 [F140-;A12000+;L]- FM424 [K250;L]- PAZAR - GEFME - PATHO [F280-;K280]- TUSCA [R]- ERSEN</Route>
+    <Route Runway="36">[A7000-;A5000+;K220] SADIK - FM436 - FM435 [A10000;R]- FM434 [R]- FM433 [R]- FM432 [R]- FM431 [L]- FM430 [A10000;K230;L]- FM426 [L]- FM425 [F140-;A12000+;L]- FM424 [K250;L]- PAZAR - GEFME - PATHO [F280-;K280]- TUSCA [R]- ERSEN</Route>
+  </STAR>
+  
+  <STAR Name="SISPI2A" Airport="LTFM" Runways="34L,35R,36,16R,18">
+    <Route Runway="34L">[A7000-;A5000+;K220] SADIK - FM536 - FM535 [A11000;L]- FM534 [L]- FM533 [L]- FM532 [L]- FM531 [A11000;K230;R]- FM530 [R]- FM526 - FM525 [F160-;F150+;R]- FM524 [L]- FM623 [K250;L]- FM622 [F210+;R]- FM621 - FM620 [F280-;K280;R]- SISPI</Route>
+    <Route Runway="35R">[A7000-;A5000+;K220] SADIK - FM536 - FM535 [A11000;L]- FM534 [L]- FM533 [L]- FM532 [L]- FM531 [A11000;K230;R]- FM530 [R]- FM526 - FM525 [F160-;F150+;R]- FM524 [L]- FM623 [K250;L]- FM622 [F210+;R]- FM621 - FM620 [F280-;K280;R]- SISPI</Route>
+    <Route Runway="36">[A7000-;A5000+;K220] SADIK - FM536 - FM535 [A11000;L]- FM534 [L]- FM533 [L]- FM532 [L]- FM531 [A11000;K230;R]- FM530 [R]- FM526 - FM525 [F160-;F150+;R]- FM524 [L]- FM623 [K250;L]- FM622 [F210+;R]- FM621 - FM620 [F280-;K280;R]- SISPI</Route>
+  </STAR>
+</STARs>
+
+
+
+
+</STARs>

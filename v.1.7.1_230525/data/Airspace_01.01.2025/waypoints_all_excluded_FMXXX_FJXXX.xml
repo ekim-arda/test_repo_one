@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Fixes><Point Name="ACCUA" Type="Fix">
+    <Latitude>41 40 32.15 N</Latitude>
+    <Longitude>28 01 52.94 E</Longitude>
+  </Point><Point Name="ADMIV" Type="Fix">
+    <Latitude>40 46 17.11 N</Latitude>
+    <Longitude>27 42 15.25 E</Longitude>
+  </Point><Point Name="APSID" Type="Fix">
+    <Latitude>40 47 48.62 N</Latitude>
+    <Longitude>27 36 08.21 E</Longitude>
+  </Point><Point Name="ASGAX" Type="Fix">
+    <Latitude>40 54 40.44 N</Latitude>
+    <Longitude>28 41 33.88 E</Longitude>
+  </Point><Point Name="ASMAP" Type="Fix">
+    <Latitude>40 37 53.00 N</Latitude>
+    <Longitude>30 42 41.00 E</Longitude>
+  </Point><Point Name="BARPE" Type="Fix">
+    <Latitude>40 55 34.00 N</Latitude>
+    <Longitude>26 58 41.00 E</Longitude>
+  </Point><Point Name="BIBAM" Type="Fix">
+    <Latitude>40 52 21.65 N</Latitude>
+    <Longitude>28 24 03.78 E</Longitude>
+  </Point><Point Name="ELNUG" Type="Fix">
+    <Latitude>41 07 35.13 N</Latitude>
+    <Longitude>28 42 36.51 E</Longitude>
+  </Point><Point Name="ETLEY" Type="Fix">
+    <Latitude>41 54 24.48 N</Latitude>
+    <Longitude>29 26 06.97 E</Longitude>
+  </Point><Point Name="EVMOG" Type="Fix">
+    <Latitude>40 32 35.83 N</Latitude>
+    <Longitude>28 45 02.26 E</Longitude>
+  </Point><Point Name="FILFU" Type="Fix">
+    <Latitude>41 01 11.14 N</Latitude>
+    <Longitude>28 55 37.30 E</Longitude>
+  </Point><Point Name="GITVO" Type="Fix">
+    <Latitude>41 40 11.54 N</Latitude>
+    <Longitude>28 36 30.44 E</Longitude>
+  </Point><Point Name="GOVGU" Type="Fix">
+    <Latitude>41 40 17.82 N</Latitude>
+    <Longitude>28 27 38.60 E</Longitude>
+  </Point><Point Name="GUEME" Type="Fix">
+    <Latitude>40 45 29.83 N</Latitude>
+    <Longitude>27 33 14.43 E</Longitude>
+  </Point><Point Name="GUPTU" Type="Fix">
+    <Latitude>40 18 37.01 N</Latitude>
+    <Longitude>29 01 20.56 E</Longitude>
+  </Point><Point Name="HANCI" Type="Fix">
+    <Latitude>41 18 28.25 N</Latitude>
+    <Longitude>28 56 34.71 E</Longitude>
+  </Point><Point Name="IBLAX" Type="Fix">
+    <Latitude>41 58 59.00 N</Latitude>
+    <Longitude>28 17 09.00 E</Longitude>
+  </Point><Point Name="IBSIN" Type="Fix">
+    <Latitude>40 36 40.23 N</Latitude>
+    <Longitude>29 41 14.13 E</Longitude>
+  </Point><Point Name="INPIK" Type="Fix">
+    <Latitude>40 47 37.77 N</Latitude>
+    <Longitude>27 57 57.44 E</Longitude>
+  </Point><Point Name="INRUV" Type="Fix">
+    <Latitude>40 46 07.90 N</Latitude>
+    <Longitude>29 32 00.78 E</Longitude>
+  </Point><Point Name="IVGUS" Type="Fix">
+    <Latitude>40 34 08.00 N</Latitude>
+    <Longitude>27 34 40.00 E</Longitude>
+  </Point><Point Name="KRASO" Type="Fix">
+    <Latitude>40 54 36.47 N</Latitude>
+    <Longitude>28 39 19.60 E</Longitude>
+  </Point><Point Name="LECKI" Type="Fix">
+    <Latitude>40 37 41.10 N</Latitude>
+    <Longitude>29 52 24.88 E</Longitude>
+  </Point><Point Name="LIDMU" Type="Fix">
+    <Latitude>40 44 04.07 N</Latitude>
+    <Longitude>29 42 15.71 E</Longitude>
+  </Point><Point Name="MAKOL" Type="Fix">
+    <Latitude>42 10 14.00 N</Latitude>
+    <Longitude>29 08 34.00 E</Longitude>
+  </Point><Point Name="MIKOC" Type="Fix">
+    <Latitude>41 04 23.31 N</Latitude>
+    <Longitude>28 49 07.23 E</Longitude>
+  </Point><Point Name="MIVDI" Type="Fix">
+    <Latitude>40 47 44.05 N</Latitude>
+    <Longitude>27 44 28.67 E</Longitude>
+  </Point><Point Name="MUTBE" Type="Fix">
+    <Latitude>41 44 00.66 N</Latitude>
+    <Longitude>28 55 52.77 E</Longitude>
+  </Point><Point Name="NAHUM" Type="Fix">
+    <Latitude>40 50 14.03 N</Latitude>
+    <Longitude>28 09 50.17 E</Longitude>
+  </Point><Point Name="NASNA" Type="Fix">
+    <Latitude>40 33 44.32 N</Latitude>
+    <Longitude>29 10 01.27 E</Longitude>
+  </Point><Point Name="NENVI" Type="Fix">
+    <Latitude>40 35 12.92 N</Latitude>
+    <Longitude>29 25 32.98 E</Longitude>
+  </Point><Point Name="NOTVI" Type="Fix">
+    <Latitude>40 43 39.78 N</Latitude>
+    <Longitude>30 03 58.01 E</Longitude>
+  </Point><Point Name="ORIAC" Type="Fix">
+    <Latitude>40 53 05.26 N</Latitude>
+    <Longitude>27 20 12.02 E</Longitude>
+  </Point><Point Name="OSMEV" Type="Fix">
+    <Latitude>41 59 52.00 N</Latitude>
+    <Longitude>30 34 18.00 E</Longitude>
+  </Point><Point Name="PEPAK" Type="Fix">
+    <Latitude>40 41 45.60 N</Latitude>
+    <Longitude>29 19 17.96 E</Longitude>
+  </Point><Point Name="QUNTE" Type="Fix">
+    <Latitude>41 36 52.27 N</Latitude>
+    <Longitude>28 47 49.21 E</Longitude>
+  </Point><Point Name="RATVU" Type="Fix">
+    <Latitude>39 54 24.00 N</Latitude>
+    <Longitude>29 22 42.00 E</Longitude>
+  </Point><Point Name="REDGI" Type="Fix">
+    <Latitude>41 18 27.36 N</Latitude>
+    <Longitude>28 33 06.03 E</Longitude>
+  </Point><Point Name="RITGU" Type="Fix">
+    <Latitude>40 47 38.87 N</Latitude>
+    <Longitude>27 52 49.10 E</Longitude>
+  </Point><Point Name="ROCHE" Type="Fix">
+    <Latitude>40 33 06.79 N</Latitude>
+    <Longitude>28 56 05.22 E</Longitude>
+  </Point><Point Name="TETPU" Type="Fix">
+    <Latitude>40 50 12.66 N</Latitude>
+    <Longitude>28 29 23.82 E</Longitude>
+  </Point><Point Name="TIBNU" Type="Fix">
+    <Latitude>40 57 55.58 N</Latitude>
+    <Longitude>28 48 34.32 E</Longitude>
+  </Point><Point Name="TUDBU" Type="Fix">
+    <Latitude>41 58 00.00 N</Latitude>
+    <Longitude>27 46 37.00 E</Longitude>
+  </Point><Point Name="UMBEM" Type="Fix">
+    <Latitude>40 52 08.58 N</Latitude>
+    <Longitude>28 20 16.02 E</Longitude>
+  </Point><Point Name="UNLIR" Type="Fix">
+    <Latitude>41 47 38.57 N</Latitude>
+    <Longitude>28 05 06.17 E</Longitude>
+  </Point><Point Name="VADEN" Type="Fix">
+    <Latitude>42 03 56.00 N</Latitude>
+    <Longitude>27 12 58.00 E</Longitude>
+  </Point><Point Name="VICEN" Type="Fix">
+    <Latitude>40 39 56.51 N</Latitude>
+    <Longitude>30 18 03.42 E</Longitude>
+  </Point><Point Name="VRACA" Type="Fix">
+    <Latitude>40 40 07.03 N</Latitude>
+    <Longitude>28 43 51.51 E</Longitude>
+  </Point><Point Name="XESRA" Type="Fix">
+    <Latitude>40 11 08.95 N</Latitude>
+    <Longitude>29 04 02.13 E</Longitude>
+  </Point><Point Name="AGBET" Type="Fix">
+    <Latitude>41 02 23.66 N</Latitude>
+    <Longitude>26 53 50.73 E</Longitude>
+  </Point><Point Name="ATPIX" Type="Fix">
+    <Latitude>41 45 12.00 N</Latitude>
+    <Longitude>30 37 25.00 E</Longitude>
+  </Point><Point Name="AYTEK" Type="Fix">
+    <Latitude>41 48 29.00 N</Latitude>
+    <Longitude>26 21 42.00 E</Longitude>
+  </Point><Point Name="DIVDI" Type="Fix">
+    <Latitude>41 36 23.49 N</Latitude>
+    <Longitude>28 53 17.89 E</Longitude>
+  </Point><Point Name="DRAMO" Type="Fix">
+    <Latitude>41 02 04.00 N</Latitude>
+    <Longitude>26 36 40.00 E</Longitude>
+  </Point><Point Name="ENLEC" Type="Fix">
+    <Latitude>41 28 29.32 N</Latitude>
+    <Longitude>29 05 27.20 E</Longitude>
+  </Point><Point Name="ENRAW" Type="Fix">
+    <Latitude>41 08 57.15 N</Latitude>
+    <Longitude>28 22 54.60 E</Longitude>
+  </Point><Point Name="EPEKI" Type="Fix">
+    <Latitude>40 54 49.72 N</Latitude>
+    <Longitude>30 13 14.15 E</Longitude>
+  </Point><Point Name="ERSEN" Type="Fix">
+    <Latitude>40 51 56.00 N</Latitude>
+    <Longitude>30 39 58.00 E</Longitude>
+  </Point><Point Name="GEFME" Type="Fix">
+    <Latitude>41 11 40.98 N</Latitude>
+    <Longitude>030 09 36.67 E</Longitude>
+  </Point><Point Name="GINLI" Type="Fix">
+    <Latitude>41 52 16.00 N</Latitude>
+    <Longitude>028 46 28.00 E</Longitude>
+  </Point><Point Name="IMREN" Type="Fix">
+    <Latitude>40 58 32.41 N</Latitude>
+    <Longitude>028 23 11.96 E</Longitude>
+  </Point><Point Name="LIZTA" Type="Fix">
+    <Latitude>41 28 22.97 N</Latitude>
+    <Longitude>028 59 25.09 E</Longitude>
+  </Point><Point Name="PATHO" Type="Fix">
+    <Latitude>41 05 25.21 N</Latitude>
+    <Longitude>030 19 13.49 E</Longitude>
+  </Point><Point Name="PAZAR" Type="Fix">
+    <Latitude>41 17 56.00 N</Latitude>
+    <Longitude>029 59 58.00 E</Longitude>
+  </Point><Point Name="SADIK" Type="Fix">
+    <Latitude>40 54 41.43 N</Latitude>
+    <Longitude>029 00 34.36 E</Longitude>
+  </Point><Point Name="TUSCA" Type="Fix">
+    <Latitude>40 58 52.72 N</Latitude>
+    <Longitude>030 29 12.81 E</Longitude>
+  </Point><Point Name="ABNIN" Type="Fix">
+    <Latitude>40 46 54.89 N</Latitude>
+    <Longitude>28 14 54.42 E</Longitude>
+  </Point><Point Name="ADVUX" Type="Fix">
+    <Latitude>40 21 01.10 N</Latitude>
+    <Longitude>29 30 18.00 E</Longitude>
+  </Point><Point Name="AFGAR" Type="Fix">
+    <Latitude>41 27 01.00 N</Latitude>
+    <Longitude>27 48 25.00 E</Longitude>
+  </Point><Point Name="ARRSO" Type="Fix">
+    <Latitude>40 28 50.27 N</Latitude>
+    <Longitude>29 22 07.97 E</Longitude>
+  </Point><Point Name="ASGUK" Type="Fix">
+    <Latitude>40 10 31.34 N</Latitude>
+    <Longitude>29 41 10.10 E</Longitude>
+  </Point><Point Name="ASVIK" Type="Fix">
+    <Latitude>40 12 31.45 N</Latitude>
+    <Longitude>29 39 07.58 E</Longitude>
+  </Point><Point Name="AZBAN" Type="Fix">
+    <Latitude>41 14 15.63 N</Latitude>
+    <Longitude>29 32 14.84 E</Longitude>
+  </Point><Point Name="BEBIS" Type="Fix">
+    <Latitude>41 35 17.26 N</Latitude>
+    <Longitude>29 37 06.14 E</Longitude>
+  </Point><Point Name="BETIZ" Type="Fix">
+    <Latitude>41 39 11.90 N</Latitude>
+    <Longitude>29 21 30.62 E</Longitude>
+  </Point><Point Name="BKZ" Type="VOR">
+    <Latitude>41 07 37.00 N</Latitude>
+    <Longitude>29 08 34.00 E</Longitude>
+  </Point><Point Name="EFESE" Type="Fix">
+    <Latitude>40 48 17.75 N</Latitude>
+    <Longitude>28 46 09.34 E</Longitude>
+  </Point><Point Name="EROVA" Type="Fix">
+    <Latitude>41 39 55.79 N</Latitude>
+    <Longitude>28 49 46.86 E</Longitude>
+  </Point><Point Name="ERTAS" Type="Fix">
+    <Latitude>41 27 41.00 N</Latitude>
+    <Longitude>29 08 48.00 E</Longitude>
+  </Point><Point Name="EVKEB" Type="Fix">
+    <Latitude>41 32 08.16 N</Latitude>
+    <Longitude>29 45 32.04 E</Longitude>
+  </Point><Point Name="FENER" Type="Fix">
+    <Latitude>41 17 11.00 N</Latitude>
+    <Longitude>28 21 28.00 E</Longitude>
+  </Point><Point Name="INDUG" Type="Fix">
+    <Latitude>41 22 08.29 N</Latitude>
+    <Longitude>29 41 15.86 E</Longitude>
+  </Point><Point Name="INGIX" Type="Fix">
+    <Latitude>40 46 18.60 N</Latitude>
+    <Longitude>28 37 34.86 E</Longitude>
+  </Point><Point Name="INPAP" Type="Fix">
+    <Latitude>41 39 32.89 N</Latitude>
+    <Longitude>29 07 07.14 E</Longitude>
+  </Point><Point Name="IRDED" Type="Fix">
+    <Latitude>40 57 56.13 N</Latitude>
+    <Longitude>28 18 42.37 E</Longitude>
+  </Point><Point Name="IXODU" Type="Fix">
+    <Latitude>40 40 50.69 N</Latitude>
+    <Longitude>29 41 14.82 E</Longitude>
+  </Point><Point Name="KVITO" Type="Fix">
+    <Latitude>41 17 04.45 N</Latitude>
+    <Longitude>27 51 56.34 E</Longitude>
+  </Point><Point Name="NUDMU" Type="Fix">
+    <Latitude>41 09 34.87 N</Latitude>
+    <Longitude>29 35 56.17 E</Longitude>
+  </Point><Point Name="NUGBA" Type="Fix">
+    <Latitude>41 35 28.00 N</Latitude>
+    <Longitude>30 40 27.00 E</Longitude>
+  </Point><Point Name="NUSGI" Type="Fix">
+    <Latitude>41 42 44.23 N</Latitude>
+    <Longitude>29 07 15.07 E</Longitude>
+  </Point><Point Name="OBIXI" Type="Fix">
+    <Latitude>40 46 12.92 N</Latitude>
+    <Longitude>29 00 53.53 E</Longitude>
+  </Point><Point Name="REKNU" Type="Fix">
+    <Latitude>41 46 47.33 N</Latitude>
+    <Longitude>28 50 44.84 E</Longitude>
+  </Point><Point Name="ROXUK" Type="Fix">
+    <Latitude>39 53 25.00 N</Latitude>
+    <Longitude>29 43 07.00 E</Longitude>
+  </Point><Point Name="SBH" Type="VOR">
+    <Latitude>40 54 26.70 N</Latitude>
+    <Longitude>29 19 58.00 E</Longitude>
+  </Point><Point Name="SGN" Type="VOR">
+    <Latitude>40 54 05.65 N</Latitude>
+    <Longitude>29 20 36.96 E</Longitude>
+  </Point><Point Name="UNKEX" Type="Fix">
+    <Latitude>40 24 33.66 N</Latitude>
+    <Longitude>29 41 12.18 E</Longitude>
+  </Point><Point Name="UPMIV" Type="Fix">
+    <Latitude>41 45 35.16 N</Latitude>
+    <Longitude>29 35 49.04 E</Longitude>
+  </Point><Point Name="VAGSI" Type="Fix">
+    <Latitude>41 27 39.18 N</Latitude>
+    <Longitude>29 56 50.12 E</Longitude>
+  </Point><Point Name="VAZZO" Type="Fix">
+    <Latitude>40 47 39.66 N</Latitude>
+    <Longitude>28 35 39.19 E</Longitude>
+  </Point><Point Name="YAA" Type="VOR">
+    <Latitude>40 28 30.00 N</Latitude>
+    <Longitude>29 12 27.00 E</Longitude>
+  </Point><Point Name="YOBOR" Type="Fix">
+    <Latitude>40 40 43.00 N</Latitude>
+    <Longitude>28 49 04.00 E</Longitude>
+  </Point><Point Name="YUZVE" Type="Fix">
+    <Latitude>41 23 07.17 N</Latitude>
+    <Longitude>29 29 45.14 E</Longitude>
+  </Point><Point Name="AKCAK" Type="Fix">
+      <Latitude>41 25 44.00 N</Latitude>
+      <Longitude>30 43 29.00 E</Longitude>
+    </Point><Point Name="ENFEZ" Type="Fix">
+      <Latitude>41 29 56.42 N</Latitude>
+      <Longitude>28 33 32.11 E</Longitude>
+    </Point><Point Name="EMGIM" Type="Fix">
+      <Latitude>39 54 34.00 N</Latitude>
+      <Longitude>29 32 32.00 E</Longitude>
+    </Point><Point Name="ETAMP" Type="Fix">
+      <Latitude>39 34 47.00 N</Latitude>
+      <Longitude>29 43 44.00 E</Longitude>
+    </Point><Point Name="EVRUG" Type="Fix">
+      <Latitude>40 23 08.14 N</Latitude>
+      <Longitude>30 08 04.50 E</Longitude>
+    </Point><Point Name="GUMRU" Type="Fix">
+      <Latitude>41 32 56.00 N</Latitude>
+      <Longitude>31 20 58.00 E</Longitude>
+    </Point><Point Name="IBODU" Type="Fix">
+      <Latitude>41 33 16.00 N</Latitude>
+      <Longitude>27 04 44.00 E</Longitude>
+    </Point><Point Name="IZMAL" Type="Fix">
+      <Latitude>40 11 57.00 N</Latitude>
+      <Longitude>27 30 43.00 E</Longitude>
+    </Point><Point Name="LAMVU" Type="Fix">
+      <Latitude>40 39 08.93 N</Latitude>
+      <Longitude>27 29 49.71 E</Longitude>
+    </Point><Point Name="LANTU" Type="Fix">
+      <Latitude>40 33 43.62 N</Latitude>
+      <Longitude>30 04 10.34 E</Longitude>
+    </Point><Point Name="OKIPI" Type="Fix">
+      <Latitude>41 02 23.03 N</Latitude>
+      <Longitude>29 41 42.98 E</Longitude>
+    </Point><Point Name="PAMZA" Type="Fix">
+      <Latitude>41 00 52.69 N</Latitude>
+      <Longitude>29 50 44.79 E</Longitude>
+    </Point><Point Name="PITOF" Type="Fix">
+      <Latitude>41 18 31.26 N</Latitude>
+      <Longitude>29 26 11.80 E</Longitude>
+    </Point><Point Name="RAVIL" Type="Fix">
+      <Latitude>40 20 10.27 N</Latitude>
+      <Longitude>30 00 07.31 E</Longitude>
+    </Point><Point Name="REBAH" Type="Fix">
+      <Latitude>41 14 18.10 N</Latitude>
+      <Longitude>28 20 37.61 E</Longitude>
+    </Point><Point Name="RERSU" Type="Fix">
+      <Latitude>40 43 22.03 N</Latitude>
+      <Longitude>29 45 50.41 E</Longitude>
+    </Point><Point Name="TELRI" Type="Fix">
+      <Latitude>40 18 10.71 N</Latitude>
+      <Longitude>27 33 18.58 E</Longitude>
+    </Point><Point Name="TOKER" Type="Fix">
+      <Latitude>40 18 48.00 N</Latitude>
+      <Longitude>30 46 20.00 E</Longitude>
+    </Point><Point Name="TUZWE" Type="Fix">
+      <Latitude>41 02 23.17 N</Latitude>
+      <Longitude>28 10 52.52 E</Longitude>
+    </Point><Point Name="RILEX" Type="Fix">
+      <Latitude>41 58 16.00 N</Latitude>
+      <Longitude>26 45 59.00 E</Longitude>
+    </Point></Fixes>
