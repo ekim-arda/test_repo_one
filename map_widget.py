@@ -1,1 +1,0 @@
-<file_upload>map_widget.py</file_upload>
