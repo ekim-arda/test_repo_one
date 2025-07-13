@@ -1076,9 +1076,6 @@
   </Point><Point Name="FM120" Type="Fix">
     <Latitude>40 50 41.87 N</Latitude>
     <Longitude>29 30 54.37 E</Longitude>
-  </Point><Point Name="FM121" Type="Fix">
-    <Latitude>40 50 21.32 N</Latitude>
-    <Longitude>29 18 59.12 E</Longitude>
   </Point><Point Name="FM122" Type="Fix">
     <Latitude>40 49 58.55 N</Latitude>
     <Longitude>29 06 32.59 E</Longitude>
@@ -1207,50 +1204,5 @@
     <Longitude>30 31 29.48 E</Longitude>
   </Point><Point Name="FM671" Type="Fix">
     <Latitude>41 22 11.42 N</Latitude>
-    <Longitude>30 17 20.67 E</Longitude>
-  </Point><Point Name="FM918" Type="Fix">
-    <Latitude>41 46 18.42 N</Latitude>
-    <Longitude>29 18 10.22 E</Longitude>
-  </Point><Point Name="FM910" Type="Fix">
-    <Latitude>41 49 54.40 N</Latitude>
-    <Longitude>28 05 48.56 E</Longitude>
-  </Point><Point Name="FM911" Type="Fix">
-    <Latitude>41 45 12.34 N</Latitude>      
-    <Longitude>28 10 48.05 E</Longitude>
-  </Point><Point Name="FM912" Type="Fix">
-    <Latitude>41 50 04.24 N</Latitude>
-    <Longitude>28 32 07.44 E</Longitude>
-  </Point><Point Name="FM913" Type="Fix">
-    <Latitude>41 52 44.77 N</Latitude>
-    <Longitude>28 43 59.97 E</Longitude>
-  </Point><Point Name="FM914" Type="Fix">
-    <Latitude>41 48 32.17 N</Latitude>
-    <Longitude>28 50 15.44 E</Longitude>
-  </Point><Point Name="FM916" Type="Fix">
-    <Latitude>41 50 39.92 N</Latitude>
-    <Longitude>28 59 49.03 E</Longitude>
-  </Point><Point Name="FM917" Type="Fix">
-    <Latitude>41 44 39.15 N</Latitude>
-    <Longitude>29 08 41.32 E</Longitude>
-  </Point><Point Name="FM810" Type="Fix">
-    <Latitude>41 15 44.53 N</Latitude>
-    <Longitude>28 10 22.88 E</Longitude>
-  </Point><Point Name="FM811" Type="Fix">
-    <Latitude>41 19 58.93 N</Latitude>
-    <Longitude>28 04 44.09 E</Longitude>
-  </Point><Point Name="FM812" Type="Fix">
-    <Latitude>41 25 10.62 N</Latitude>
-    <Longitude>28 00 43.48 E</Longitude>
-  </Point><Point Name="FM813" Type="Fix">
-    <Latitude>41 30 58.54 N</Latitude>      
-    <Longitude>27 58 37.73 E</Longitude>
-  </Point><Point Name="FM814" Type="Fix">
-    <Latitude>41 36 59.08 N</Latitude>    
-    <Longitude>27 58 35.89 E</Longitude>
-  </Point><Point Name="FM815" Type="Fix">
-    <Latitude>41 35 49.97 N</Latitude>
-    <Longitude>28 10 30.03 E</Longitude>
-  </Point><Point Name="FM816" Type="Fix">
-    <Latitude>41 34 55.37 N</Latitude>
-    <Longitude>28 19 45.16 E</Longitude>  
+    <Longitude>30 17 20.67 E</Longitude>  
   </Point></Fixes>
