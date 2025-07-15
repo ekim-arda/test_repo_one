@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import (QDialog, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, 
                           QPushButton, QWidget, QGridLayout, QFrame, QDoubleSpinBox,
-                          QMessageBox, QTabWidget, QTextEdit)
+                          QMessageBox)
 from PyQt5.QtCore import Qt, pyqtSignal, QPoint
 from PyQt5.QtGui import QPalette, QColor, QDoubleValidator
 
@@ -30,12 +30,6 @@ class TrombonePopupDialog(QDialog):
         
         # Trombone taşındı veya döndürüldü mü kontrolü
         self.moved_or_rotated = trombone_config.get('moved_or_rotated', False)
-        
-        # Trombone ID'sini sakla
-        self.trombone_id = trombone_config.get('id', 'Unknown')
-        
-        # Waypoint'leri sakla
-        self.waypoints = trombone_config.get('waypoints', [])
         
         # Basit bir border eklemek için stil
         self.setStyleSheet("""
@@ -125,35 +119,10 @@ class TrombonePopupDialog(QDialog):
         
         self.layout.addWidget(self.title_bar)
         
-        # Tab widget oluştur
-        self.tab_widget = QTabWidget()
-        self.tab_widget.setStyleSheet("""
-            QTabWidget::pane {
-                border: 1px solid #cccccc;
-                background-color: white;
-            }
-            QTabBar::tab {
-                background-color: #f0f0f0;
-                border: 1px solid #cccccc;
-                border-bottom: none;
-                padding: 6px 12px;
-                margin-right: 2px;
-                font-size: 10px;
-                font-weight: bold;
-            }
-            QTabBar::tab:selected {
-                background-color: white;
-                border-bottom: 1px solid white;
-            }
-            QTabBar::tab:hover {
-                background-color: #e5e5e5;
-            }
-        """)
-        
-        # Ayarlar sekmesi
-        settings_tab = QWidget()
-        settings_layout = QVBoxLayout(settings_tab)
-        settings_layout.setContentsMargins(10, 10, 10, 0)
+        # İçerik alanı
+        content_widget = QWidget()
+        content_layout = QVBoxLayout(content_widget)
+        content_layout.setContentsMargins(10, 10, 10, 0)
         
         # Parametreler için grid layout
         param_layout = QGridLayout()
@@ -215,7 +184,7 @@ class TrombonePopupDialog(QDialog):
             warning_label2.setStyleSheet("color: red; font-style: italic; font-size: 10px;")
             warning_layout.addWidget(warning_label1)
             warning_layout.addWidget(warning_label2)
-            settings_layout.addLayout(warning_layout)
+            content_layout.addLayout(warning_layout)
             
             # Tüm düzenleme alanlarını devre dışı bırak
             self.threshold_distance.setEnabled(False)
@@ -223,22 +192,7 @@ class TrombonePopupDialog(QDialog):
             self.base_distance.setEnabled(False)
             self.extension_length.setEnabled(False)
         
-        settings_layout.addLayout(param_layout)
-        
-        # Detay sekmesi
-        details_tab = QWidget()
-        details_layout = QVBoxLayout(details_tab)
-        details_layout.setContentsMargins(10, 10, 10, 10)
-        
-        # Detay bilgilerini ekle
-        self.add_trombone_details(details_layout)
-        
-        # Sekmeleri tab widget'a ekle
-        self.tab_widget.addTab(settings_tab, "Ayarlar")
-        self.tab_widget.addTab(details_tab, "Detay")
-        
-        # Tab widget'ını ana layout'a ekle
-        self.layout.addWidget(self.tab_widget)
+        content_layout.addLayout(param_layout)
         
         # Butonlar
         btn_layout = QHBoxLayout()
@@ -259,11 +213,18 @@ class TrombonePopupDialog(QDialog):
         self.rotate_btn.clicked.connect(self.on_rotate)
         self.rotate_btn.setStyleSheet("QPushButton { background-color: #fff2e6; text-align: center; }")
         
-        # Eğer rota taşındı veya döndürüldüyse Güncelleme butonunu devre dışı bırak
+        # Flip button
+        self.flip_btn = QPushButton("Flip")
+        self.flip_btn.clicked.connect(self.on_flip)
+        self.flip_btn.setToolTip("Flip pattern horizontally")
+
+        # Eğer rota taşındı veya döndürüldüyse Güncelleme ve Flip butonlarını devre dışı bırak
         if self.moved_or_rotated:
             self.apply_btn.setEnabled(False)
             self.apply_btn.setToolTip("Taşınmış veya döndürülmüş rotaların parametreleri değiştirilemez")
-        
+            self.flip_btn.setEnabled(False)
+            self.flip_btn.setToolTip("Cannot flip a moved/rotated path")
+
         self.remove_btn = QPushButton("Remove")
         self.remove_btn.clicked.connect(self.on_remove)
         self.remove_btn.setStyleSheet("QPushButton { background-color: #ffeded; }")
@@ -276,16 +237,19 @@ class TrombonePopupDialog(QDialog):
         btn_layout.addWidget(self.save_btn)
         btn_layout.addWidget(self.move_btn)
         btn_layout.addWidget(self.rotate_btn)
+        btn_layout.addWidget(self.flip_btn)
         btn_layout.addWidget(self.remove_btn)
         btn_layout.addWidget(self.cancel_btn)
         
-        # Buton layout'ını ana layout'a ekle
-        self.layout.addLayout(btn_layout)
+        content_layout.addLayout(btn_layout)
+        
+        # İçerik widget'ını ana layout'a ekle
+        self.layout.addWidget(content_widget)
         
         # Buton genişliklerini popup genişliğine göre orantılı olarak ayarla
-        buttons = [self.apply_btn, self.save_btn, self.move_btn, self.rotate_btn, self.cancel_btn, self.remove_btn]
+        buttons = [self.apply_btn, self.save_btn, self.move_btn, self.rotate_btn, self.flip_btn, self.cancel_btn, self.remove_btn]
         button_count = len(buttons)
-        popup_width = 390  # Popup genişliği
+        popup_width = 420  # Popup genişliği (artırıldı)
         button_space = popup_width - 90  # Kenar boşlukları ve butonlar arası boşluk için çıkarma
         button_width = button_space / button_count
         
@@ -297,7 +261,7 @@ class TrombonePopupDialog(QDialog):
         self.remove_btn.setStyleSheet("QPushButton { background-color: #ffeded; text-align: center; }")
         
         # Sabit bir boyut ayarla - Move butonu eklendiğinden biraz daha geniş
-        self.setFixedSize(390, 200)
+        self.setFixedSize(420, 200)
     
     def on_apply(self):
         """Değişiklikleri uygula"""
@@ -358,10 +322,6 @@ class TrombonePopupDialog(QDialog):
                 # Sinyali emit et
                 self.tromboneSettingsChanged.emit(updated_config)
                 print("Trombone update signal sent successfully")
-                
-                # Detay sekmesini güncelle
-                self.update_details_tab()
-                
             except Exception as e:
                 from PyQt5.QtWidgets import QMessageBox
                 error_msg = f"Error updating trombone: {str(e)}"
@@ -374,6 +334,19 @@ class TrombonePopupDialog(QDialog):
             QMessageBox.warning(self, "Error", "No valid ID found for this trombone.")
         # popup open; do not close
     
+    def on_flip(self):
+        """Flip the trombone pattern horizontally by negating the base angle."""
+        # Get a copy of the current config
+        updated_config = self.trombone_config.copy()
+        
+        # Flip the base angle
+        current_angle = updated_config.get('base_angle', 90.0)
+        updated_config['base_angle'] = -current_angle
+        
+        # Emit the signal to update the path and close the dialog
+        self.tromboneSettingsChanged.emit(updated_config)
+        self.accept()
+
     def on_export_json(self):
         """Route'u JSON olarak kaydetmek için sinyal gönder"""
         route_id = self.trombone_config.get('id', '')
@@ -467,175 +440,3 @@ class TrombonePopupDialog(QDialog):
                 parent.last_trombone_popup_pos = self.pos()
         else:
             super().mouseReleaseEvent(event)
-    
-    def add_trombone_details(self, layout):
-        """Trombone detay bilgilerini ekler"""
-        # Detay bilgilerini gösteren QTextEdit
-        self.details_text = QTextEdit()
-        self.details_text.setReadOnly(True)
-        self.details_text.setStyleSheet("""
-            QTextEdit {
-                background-color: #f5f5f5;
-                border: 1px solid #cccccc;
-                border-radius: 4px;
-                padding: 8px;
-                font-family: 'Courier New', monospace;
-                font-size: 12px;
-            }
-        """)
-        
-        # Detay bilgilerini oluştur
-        details_text = self.generate_trombone_details()
-        self.details_text.setPlainText(details_text)
-        
-        layout.addWidget(self.details_text)
-    
-    def generate_trombone_details(self):
-        """Trombone detay bilgilerini oluşturur"""
-        details = []
-        
-        # Başlık
-        details.append("=== TROMBONE DETAYLARI ===")
-        details.append("")
-        
-        # Trombone ID'si
-        details.append(f"Trombone ID: {self.trombone_id}")
-        details.append("")
-        
-        # Parametreler
-        details.append("PARAMETRELER:")
-        details.append(f"• Threshold Distance: {self.threshold_distance.value():.1f} NM")
-        details.append(f"• Base Angle: {self.base_angle.value():.1f}°")
-        details.append(f"• Base Distance: {self.base_distance.value():.1f} NM")
-        details.append(f"• Extension Length: {self.extension_length.value():.1f} NM")
-        details.append("")
-        
-        # Durum bilgisi
-        details.append("DURUM:")
-        if self.moved_or_rotated:
-            details.append("• Trombone taşındı veya döndürüldü")
-            details.append("• Parametre değişikliği devre dışı")
-        else:
-            details.append("• Trombone orijinal konumunda")
-            details.append("• Parametre değişikliği mümkün")
-        details.append("")
-        
-        # Waypoint bilgileri (eğer varsa)
-        # Debug: Mevcut config'i kontrol et
-        print(f"Trombone config keys: {list(self.trombone_config.keys())}")
-        print(f"Waypoints from init: {self.waypoints}")
-        print(f"Points from config: {self.trombone_config.get('points', [])}")
-        
-        # Parent'tan waypoint bilgilerini al
-        parent_points = []
-        parent = self.parent()
-        if parent and hasattr(parent, 'drawn_elements'):
-            for route in parent.drawn_elements.get('routes', []):
-                if route.get('id') == self.trombone_config.get('id'):
-                    parent_points = route.get('points', [])
-                    print(f"Trombone Parent'tan alınan points: {parent_points}")
-                    break
-        
-        # Birden fazla kaynaktan waypoint'leri kontrol et
-        waypoints_found = False
-        
-        # 1. İlk olarak parent'tan gelen points'i kontrol et
-        if parent_points:
-            details.append("WAYPOINT'LER:")
-            waypoints_found = True
-            for i, point in enumerate(parent_points):
-                if isinstance(point, (list, tuple)) and len(point) >= 2:
-                    lat, lon = point[0], point[1]
-                    details.append(f"• Waypoint {i+1}: {lat:.6f}, {lon:.6f}")
-                else:
-                    details.append(f"• Waypoint {i+1}: {point}")
-        
-        # 2. Eğer parent'tan waypoint yoksa, self.waypoints'i kontrol et
-        if not waypoints_found and hasattr(self, 'waypoints') and self.waypoints:
-            details.append("WAYPOINT'LER:")
-            waypoints_found = True
-            for i, waypoint in enumerate(self.waypoints):
-                if isinstance(waypoint, dict):
-                    lat = waypoint.get('lat', 'N/A')
-                    lon = waypoint.get('lon', 'N/A')
-                    name = waypoint.get('name', f'Waypoint {i+1}')
-                    if lat != 'N/A' and lon != 'N/A':
-                        details.append(f"• {name}: {lat:.6f}, {lon:.6f}")
-                    else:
-                        details.append(f"• {name}: {lat}, {lon}")
-                elif hasattr(waypoint, 'lat') and hasattr(waypoint, 'lon'):
-                    details.append(f"• Waypoint {i+1}: {waypoint.lat:.6f}, {waypoint.lon:.6f}")
-                else:
-                    details.append(f"• Waypoint {i+1}: {waypoint}")
-        
-        # 3. Eğer waypoint yoksa, points'i kontrol et
-        if not waypoints_found:
-            config_points = self.trombone_config.get('points', [])
-            if config_points:
-                details.append("WAYPOINT'LER:")
-                waypoints_found = True
-                for i, point in enumerate(config_points):
-                    if isinstance(point, (list, tuple)) and len(point) >= 2:
-                        lat, lon = point[0], point[1]
-                        details.append(f"• Waypoint {i+1}: {lat:.6f}, {lon:.6f}")
-                    else:
-                        details.append(f"• Waypoint {i+1}: {point}")
-        
-        # 4. Eğer hala waypoint yoksa, calculated_waypoints'i kontrol et
-        if not waypoints_found:
-            calculated_waypoints = self.trombone_config.get('calculated_waypoints', [])
-            if calculated_waypoints:
-                details.append("WAYPOINT'LER:")
-                waypoints_found = True
-                for i, waypoint in enumerate(calculated_waypoints):
-                    if isinstance(waypoint, dict):
-                        lat = waypoint.get('lat', 'N/A')
-                        lon = waypoint.get('lon', 'N/A')
-                        name = waypoint.get('name', f'Waypoint {i+1}')
-                        if lat != 'N/A' and lon != 'N/A':
-                            details.append(f"• {name}: {lat:.6f}, {lon:.6f}")
-                        else:
-                            details.append(f"• {name}: {lat}, {lon}")
-                    elif isinstance(waypoint, (list, tuple)) and len(waypoint) >= 2:
-                        lat, lon = waypoint[0], waypoint[1]
-                        details.append(f"• Waypoint {i+1}: {lat:.6f}, {lon:.6f}")
-                    else:
-                        details.append(f"• Waypoint {i+1}: {waypoint}")
-        
-        # 5. Eğer hala waypoint yoksa, tüm config'i kontrol et
-        if not waypoints_found:
-            for key, value in self.trombone_config.items():
-                if 'waypoint' in key.lower() or 'point' in key.lower():
-                    print(f"Possible waypoint key found: {key} = {value}")
-                    if isinstance(value, list) and value:
-                        details.append("WAYPOINT'LER:")
-                        waypoints_found = True
-                        for i, item in enumerate(value):
-                            if isinstance(item, dict):
-                                lat = item.get('lat', 'N/A')
-                                lon = item.get('lon', 'N/A')
-                                name = item.get('name', f'Waypoint {i+1}')
-                                if lat != 'N/A' and lon != 'N/A':
-                                    details.append(f"• {name}: {lat:.6f}, {lon:.6f}")
-                                else:
-                                    details.append(f"• {name}: {lat}, {lon}")
-                            elif isinstance(item, (list, tuple)) and len(item) >= 2:
-                                lat, lon = item[0], item[1]
-                                details.append(f"• Waypoint {i+1}: {lat:.6f}, {lon:.6f}")
-                            else:
-                                details.append(f"• Waypoint {i+1}: {item}")
-                        break
-        
-        # 6. Eğer hala waypoint bulunamadıysa
-        if not waypoints_found:
-            details.append("WAYPOINT'LER: Henüz tanımlanmamış")
-            print("No waypoints found in any config key!")
-        
-        return "\n".join(details)
-    
-    def update_details_tab(self):
-        """Detay sekmesini günceller"""
-        # Yeni detay metnini oluştur
-        details_text = self.generate_trombone_details()
-        # Detay metin alanını güncelle
-        self.details_text.setPlainText(details_text)
