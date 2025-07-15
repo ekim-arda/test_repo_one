@@ -1160,27 +1160,6 @@ class MapWidget(QWidget):
                     else:
                         color = self._parse_color(route.get('color', '#008080'))  # Varsayılan türkuaz
                         painter.setPen(QPen(color, self.normal_route_line_width))  # Normal kalınlıkta rota çizgisi
-                elif pattern_type == 'user_route':
-                    # For user routes - use individual route color and line width
-                    route_color = self._parse_color(route.get('color', '#800080'))  # Varsayılan mor
-                    route_width = route.get('line_width', self.normal_route_line_width)
-                    
-                    if i == self.selected_path_index or i in self.selected_route_indices:
-                        # Taşıma modunda olan yol için farklı stil
-                        if self.route_move_mode and route.get('id') == self.route_being_moved:
-                            painter.setPen(QPen(QColor(0, 200, 0), route_width + 2, Qt.DashLine))  # Yeşil, kesikli çizgi
-                        # Döndürme modunda olan yol için farklı stil
-                        elif self.route_rotate_mode and route.get('id') == self.route_being_rotated:
-                            painter.setPen(QPen(QColor(200, 100, 0), route_width + 2, Qt.DotLine))  # Turuncu-kırmızı, noktalı çizgi
-                        # Çoklu seçim modunda seçilen yol için farklı stil
-                        elif self.multi_select_mode and i in self.selected_route_indices:
-                            painter.setPen(QPen(QColor(255, 0, 255), route_width + 1))  # Mor renk, çoklu seçim için
-                        else:
-                            # Seçili user route için orijinal renk ama kalın çizgi
-                            painter.setPen(QPen(route_color, route_width + 2))  # Seçilmiş rota için kalınlık artırıldı
-                    else:
-                        # Normal user route - kullanıcının belirlediği renk ve kalınlık
-                        painter.setPen(QPen(route_color, route_width))
                 else:
                     # For trombone or other patterns
                     pen = QPen(self.route_default_color, self.normal_route_line_width)  # Normal rota kalınlığı
@@ -1757,15 +1736,12 @@ class MapWidget(QWidget):
                              'angle': config.get('track_angle',
                                                 config.get('angle', existing_config.get('angle'))),
                              'num_segments': num_segments,
+                             'clockwise': config.get('clockwise', existing_config.get('clockwise', True)),
                              'preserve_current_position': config.get('preserve_current_position', False),
                          })
                          
-                         # 'segments' değerini liste olarak ayarla
-                         arc_width = 60.0  # Varsayılan yay genişliği (derece)
-                         first_point_distance = existing_config['first_point_distance']
-                         arc_length_nm = math.radians(arc_width) * first_point_distance
-                         segment_distance = arc_length_nm / num_segments if num_segments > 0 else arc_length_nm
-                         existing_config['segments'] = [segment_distance] * num_segments
+                         # 'segments' listesini doğrudan yeni config'den al
+                         existing_config['segments'] = config.get('segments', existing_config.get('segments', []))
                          
                          # Güncellenmiş config'i kullan
                          config = existing_config
@@ -2102,10 +2078,18 @@ class MapWidget(QWidget):
     def remove_drawn_route(self, route_id):
         """Remove a specific drawn route by its ID"""
         initial_length = len(self.drawn_elements.get('routes', []))
-        self.drawn_elements['routes'] = [route for route in self.drawn_elements.get('routes', []) if route.get('id') != route_id]
-        final_length = len(self.drawn_elements['routes', []])
+        # Filter out the route to be removed
+        self.drawn_elements['routes'] = [
+            r for r in self.drawn_elements.get('routes', []) 
+            if r.get('id') != route_id
+        ]
         
+        # Get the final length
+        final_length = len(self.drawn_elements.get('routes', []))
+        
+        # Check if a route was actually removed
         if final_length < initial_length:
+            self.update_status_message(f"Route {route_id} removed")
             # Check if the removed route was the selected one
             if self.selected_path_index is not None:
                 # Find the new index of the previously selected path or reset selection
@@ -2524,6 +2508,7 @@ class MapWidget(QWidget):
         popup.pointMergeSettingsChanged.connect(
             lambda cfg: self._on_pointmerge_settings_changed(cfg, pm_config['id'])
         )
+        popup.pointMergeFlipRequested.connect(self._on_pointmerge_flip_requested)
         popup.pointMergeRemoveRequested.connect(self._on_pointmerge_remove_requested)
         popup.pointMergeExportJsonRequested.connect(self._on_pointmerge_export_json)
         popup.pointMergeMoveRequested.connect(self._on_pointmerge_move_requested)
@@ -2582,19 +2567,25 @@ class MapWidget(QWidget):
                 'first_point_distance': cfg.get('first_point_distance', cfg.get('distance', original_cfg.get('first_point_distance', 15.0))),
                 'track_angle': cfg.get('track_angle', cfg.get('angle', original_cfg.get('track_angle', 90.0))), 
                 'num_segments': num_segments,
+                # Flip işleminden gelen 'clockwise' değerini koru
+                'clockwise': cfg.get('clockwise', original_cfg.get('clockwise', True)),
                 # ÖNEMLİ: merge point koordinatlarını mevcut güncel konumdan al
                 'merge_lat': current_merge_point[0],
                 'merge_lon': current_merge_point[1],
                 'id': route_id
             })
             
-            # 'segments' değerini liste olarak ayarla
-            # Segment uzunluklarını oluştur
-            arc_width = 60.0  # Varsayılan yay genişliği (derece)
-            first_point_distance = updated_cfg['first_point_distance']
-            arc_length_nm = math.radians(arc_width) * first_point_distance
-            segment_distance = arc_length_nm / num_segments if num_segments > 0 else arc_length_nm
-            updated_cfg['segments'] = [segment_distance] * num_segments
+            # 'segments' değerini sadece cfg'de yoksa yeniden hesapla
+            if 'segments' not in cfg or not cfg['segments']:
+                # Segment uzunluklarını oluştur
+                arc_width = 60.0  # Varsayılan yay genişliği (derece)
+                first_point_distance = updated_cfg['first_point_distance']
+                arc_length_nm = math.radians(arc_width) * first_point_distance
+                segment_distance = arc_length_nm / num_segments if num_segments > 0 else arc_length_nm
+                updated_cfg['segments'] = [segment_distance] * num_segments
+            else:
+                # cfg'den gelen 'segments' listesini doğrudan kullan
+                updated_cfg['segments'] = cfg['segments']
             
             # İlgili değerlerin uyumluluğu için distance ve angle değerlerini de güncelle
             updated_cfg['distance'] = updated_cfg['first_point_distance']
@@ -2637,13 +2628,7 @@ class MapWidget(QWidget):
     
     def _on_pointmerge_remove_requested(self, route_id):
         """Handle pointmerge removal"""
-        routes = self.drawn_elements.get('routes', [])
-        for i, r in enumerate(routes):
-            if r.get('id') == route_id:
-                del routes[i]
-                self.update_status_message(f"Point Merge {route_id} silindi")
-                self.update()
-                break
+        self.remove_drawn_route(route_id)
     
     def _on_pointmerge_export_json(self, route_id):
         """Export pointmerge route to JSON"""
@@ -2717,22 +2702,6 @@ class MapWidget(QWidget):
         
         # Route döndürme sinyalini bağla
         popup.routeRotateRequested.connect(self._on_route_rotate_requested)
-        
-        # Route color ve line width sinyallerini ana pencereye bağla
-        main_window = self.parent()
-        while main_window and not hasattr(main_window, 'on_route_color_changed'):
-            main_window = main_window.parent()
-        
-        if main_window:
-            popup.routeColorChanged.connect(main_window.on_route_color_changed)
-            popup.routeLineWidthChanged.connect(main_window.on_route_line_width_changed)
-        
-        # Route color ve line width sinyallerini bağla - ana pencereyi bul
-        main_window = self.window()  # Ana pencereyi bul
-        if hasattr(main_window, 'on_route_color_changed'):
-            popup.routeColorChanged.connect(main_window.on_route_color_changed)
-        if hasattr(main_window, 'on_route_line_width_changed'):
-            popup.routeLineWidthChanged.connect(main_window.on_route_line_width_changed)
         
         # Popup'ı göster
         popup.show()
@@ -3381,3 +3350,104 @@ class MapWidget(QWidget):
                 return True
                 
         return False
+
+    def _on_pointmerge_flip_requested(self, route_id):
+        """
+        Handles the request to flip a Point-Merge pattern.
+        - For a single PMS, it reverses the order of the arc points.
+        - For a Double PMS, it re-routes the connections to flip the entry/exit points
+          without moving the main sequencing leg.
+        """
+        route_to_flip = None
+        for route in self.drawn_elements.get('routes', []):
+            if route.get('id') == route_id:
+                route_to_flip = route
+                break
+        
+        if not route_to_flip:
+            print(f"Error: Could not find route ID {route_id} to flip.")
+            return
+
+        points = route_to_flip.get('points', [])
+        config = route_to_flip.get('config', {})
+        new_points = []
+
+        # Check if this is a Double PMS and handle its specific flip logic
+        if config.get('double_pms_enabled'):
+            num_main_segments = config.get('num_segments', 0)
+            if num_main_segments == 0: return
+
+            num_main_points = num_main_segments + 1
+            if len(points) < (num_main_points * 2) + 1:
+                print("Error: Not enough points in Double PMS route to flip.")
+                return
+
+            # Deconstruct the points list
+            main_arc_points = points[0 : num_main_points]
+            inner_arc_points = points[num_main_points : num_main_points * 2]
+            merge_point = points[-1]
+            
+            # Reverse both the main and inner arc lists
+            main_arc_points.reverse()
+            inner_arc_points.reverse()
+            
+            # Re-assemble the list in the new, flipped order
+            new_points = main_arc_points + inner_arc_points + [merge_point]
+
+        else:
+            # Standard single PMS flip logic
+            if len(points) < 2: return
+            arc_points = points[:-1]
+            merge_point = points[-1]
+            arc_points.reverse()
+            new_points = arc_points + [merge_point]
+        
+        # Update the route with the new points and recalculated segments
+        route_to_flip['points'] = new_points
+        route_to_flip['segment_distances'] = self.calculate_segment_distances(new_points)
+        route_to_flip['segment_angles'] = self.calculate_track_angles(new_points)
+
+        # Also flip the 'clockwise' flag in the config for context
+        if 'config' in route_to_flip:
+            route_to_flip['config']['clockwise'] = not route_to_flip['config'].get('clockwise', True)
+            
+        print(f"Route {route_id} flipped.")
+        self.update() # Redraw the map
+
+    def _on_pointmerge_remove_requested(self, route_id):
+        """Handle pointmerge removal"""
+        self.remove_drawn_route(route_id)
+    
+    def _on_pointmerge_export_json(self, route_id):
+        """Export pointmerge route to JSON"""
+        # Find route by ID
+        route = next((r for r in self.drawn_elements.get('routes', []) if r.get('id') == route_id), None)
+        if not route:
+            QMessageBox.warning(self, "No Data", "No route data found to export.")
+            return
+            
+        # Point Merge için özel dosya adı oluştur
+        route_index = route_id.split('_')[-1] if '_' in route_id else '1'  # ID'den indeks al
+        default_filename = f"Point_Merge_{route_index}.json"
+
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
+        filePath, _ = QFileDialog.getSaveFileName(self, "Save Route Data", default_filename,
+                                                 "JSON Files (*.json);;All Files (*)", options=options)
+        if filePath:
+            try:
+                # JSON formatında tek bir rotayı kaydet
+                export_data = {
+                    'routes': [route]
+                }
+                
+                from json_utils import json_dumps
+                with open(filePath, 'w', encoding='utf-8') as f:
+                    json_data = json_dumps(export_data, indent=4)
+                    f.write(json_data)
+                
+                self.update_status_message(f"Point Merge route exported to JSON.")
+            except Exception as e:
+                QMessageBox.critical(self, "Save Error", f"Failed to save JSON file: {e}")
+        else:
+            print("Export JSON cancelled.")
